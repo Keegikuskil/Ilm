@@ -12,9 +12,9 @@ from PIL import Image, ImageTk
 
 gif_animation_id = None
 
-def saa_temp():
+def saa_temp(event = None):
     global gif_animation_id
-    linn = entry.get().lower().replace(" ", "").replace("-", "").replace("ü", "u").replace("ö", "o").replace("õ", "o").replace("ä", "a")
+    linn = entry.get().lower().strip().replace("-", "").replace("ü", "u").replace("ö", "o").replace("õ", "o").replace("ä", "a")
     label_result.config(text = "Laen...", font = font1)
     gif_label.config(image='')
     gif_label.image = None
@@ -76,6 +76,7 @@ windll.shcore.SetProcessDpiAwareness(1)
 root.title("Ilm")
 root.geometry("400x200")
 root.configure(bg="beige")
+root.bind('<Return>', saa_temp)
 
 
 font1 = TkFont.Font(family="Arial",size=12,weight="bold")
