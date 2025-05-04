@@ -1,0 +1,4 @@
+1) Leida praegune ilm
+2) Näidata praegust ilma
+3) Ilma vsc käima
+3) Animatsioonid
